@@ -1,0 +1,11 @@
+name: Use Docker Template
+
+on:
+  push:
+    branches: [ dev ]
+
+jobs:
+  deploy:
+    uses: ./.github/workflows/docker-build-template.yml
+    with:
+      image-name: my-dev-image
